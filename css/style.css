@@ -87,6 +87,7 @@ body {
 .todo-text{
     width: 100%;
     font-size: 1.5625rem;
+    text-transform: capitalize;
 }
 .fa-trash:hover{
     color: red;
