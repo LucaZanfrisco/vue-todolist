@@ -1,0 +1,86 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------- */
+
+/* Common */
+body {
+    font-family: 'Tilt Warp', cursive;
+    background-color: #C8FACC;
+}
+
+.container {
+    width: 50rem;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+}
+
+.col {
+    width: 100%;
+}
+
+/* ------- */
+
+.title {
+    margin-top: 2.25rem;
+    margin-bottom: 1.5625rem;
+    font-size: 6.25rem;
+    text-align: center;
+    color: #EDC75A;
+}
+
+.add-todo {
+    position: relative;
+    margin-bottom: 3.125rem;
+}
+#todo {
+    width: 100%;
+    height: 3.125rem;
+    border: transparent;
+    border-radius: 1.5625rem;
+    background-color: white;
+    text-align: center;
+    font-size: 1.5625rem
+}
+#todo:focus {
+    outline: none;
+    border: 2px solid #E3A156;
+}
+.add {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: inherit;
+    border-top-right-radius: 1.5625rem;
+    border-bottom-right-radius: 1.5625rem;
+    background-color: transparent;
+    font-size: 1.5625rem;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0 .625rem;
+}
+.add:hover {
+    background-color: #EDC75A;
+}
+.todo-box{
+    width: 100%;
+    height: 3.125rem;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5625rem;
+    border-bottom: 1px solid whitesmoke;
+}
+.fa-trash:hover{
+    color: red;
+    scale: 2;
+    cursor: pointer;
+}
