@@ -28,8 +28,8 @@
         <!-- Container per l'input delle nuove todo -->
         <div class="container">
             <div class="row add-todo">
-                <input type="text" name="todo" id="todo" placeholder="Inserire un nuovo ToDo" >
-                <button type="button" class="add" >Aggiungi</button>
+                <input v-model="newText" type="text" name="todo" id="todo" placeholder="Inserire un nuovo ToDo" @keyup.enter="addTodo">
+                <button type="button" class="add" @click="addTodo">Aggiungi</button>
             </div>
         </div>
         <!-- Container della todo list -->
