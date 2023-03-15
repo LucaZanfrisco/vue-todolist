@@ -28,19 +28,20 @@
         <!-- Container per l'input delle nuove todo -->
         <div class="container">
             <div class="row add-todo">
-                <input type="text" name="todo" id="todo" placeholder="Inserire un nuovo ToDo">
-                <button type="button" class="add">Aggiungi</button>
+                <input type="text" name="todo" id="todo" placeholder="Inserire un nuovo ToDo" >
+                <button type="button" class="add" >Aggiungi</button>
             </div>
         </div>
         <!-- Container della todo list -->
         <div class="container">
             <!-- ToDo list -->
-            <ul>
-                <li class="row todo-box">
-                    <div>Testo todo</div>
+            <ul v-if="todoList.length > 0">
+                <li class="row todo-box" v-for="(todo,index) in todoList" @click="done(index)" >
+                    <div :class="{todoDone: todo.done}">{{todo.text}}</div>
                     <i class="fa-solid fa-trash"></i>
                 </li>
             </ul>
+            <div v-else class="error">Nessun elemento nella Lista</div>
         </div>
     </div>
 
